@@ -37,3 +37,7 @@ navbar-component {
     align-items: center;
     background-color: white;
 }
+
+.hidden {
+    display: none;
+}

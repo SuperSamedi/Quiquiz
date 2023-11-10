@@ -11,29 +11,46 @@
 <body>
     <navbar-component></navbar-component>
     <div id="main-view">
-        <div id="container-question">
-            <div id="container-question-count">
-                <img src="assets/images/question-count-banner-1.png">
-                <div id="question-count-frame">
-                    <img src="assets/images/question-count-banner-2.png">
-                    <p id="question-count">Question 20 sur 20</p>
-                </div>
-            </div>
-            <div id="container-arrows-and-question">
-                <div class="arrow" id="arrow-left"></div>
-                <div id="container-question-frame">
-                    <p id="question">Question text Question text Question text Question text Question text Question text Question text</p>
-                </div>
-                <div class="arrow" id="arrow-right"></div>
-            </div>
+        <div id="loading-screen">
+            <img id="floating-wizard" src="assets/images/wizard-floating.png" alt="floating-wizard">
         </div>
-        <div id="container-choices">
-            <div class="choice">choice 1</div>
-            <div class="choice">choice 2</div>
-            <div class="choice">choice 3</div>
-            <div class="choice selected">choice 4</div>
-            <div class="choice">choice 5</div>
-            <div class="choice">choice 6</div>
+        <div id="quiz" class="hidden">
+            <div id="container-question">
+                <div id="container-question-count">
+                    <img src="assets/images/question-count-banner-1.png">
+                    <div id="question-count-frame">
+                        <img src="assets/images/question-count-banner-2.png">
+                        <p id="question-count">Question 20 sur 20</p>
+                    </div>
+                </div>
+                <div id="container-arrows-and-question">
+                    <div class="arrow" id="arrow-left"></div>
+                    <div id="container-question-frame">
+                        <p id="question">Question text Question text Question text Question text Question text Question text Question text</p>
+                    </div>
+                    <div class="arrow" id="arrow-right"></div>
+                </div>
+            </div>
+            <div id="container-choices">
+                <div class="choice">
+                    <p class="choice-text" data-number="1">choice 1</p>
+                </div>
+                <div class="choice">
+                    <p class="choice-text" data-number="2">choice 2</p>
+                </div>
+                <div class="choice">
+                    <p class="choice-text" data-number="3">choice 3</p>
+                </div>
+                <div class="choice selected">
+                    <p class="choice-text" data-number="4">choice 4</p>
+                </div>
+                <div class="choice">
+                    <p class="choice-text" data-number="5">choice 5</p>
+                </div>
+                <div class="choice">
+                    <p class="choice-text" data-number="6">choice 6</p>
+                </div>
+            </div>
         </div>
     </div>
 
