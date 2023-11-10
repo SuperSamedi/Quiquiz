@@ -8,7 +8,7 @@
     background-repeat: repeat-y;
     background-size: cover;
     font-family: LinLibertine;
-    z-index: -2;
+    /* z-index: -2; */
 }
 
 #container-question {
@@ -37,6 +37,7 @@
     margin: 0 auto;
     /* position: relative; */
     /* display: inline-block; */
+    z-index: 1;
 }
 
 #question-count-frame {
@@ -98,7 +99,6 @@
 
     font-weight: bold;
     transform: translateY(-1rem);
-    z-index: -1;
 }
 
 #container-choices {
