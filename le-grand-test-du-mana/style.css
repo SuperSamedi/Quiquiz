@@ -3,9 +3,6 @@
     src: url("assets/fonts/LinLibertine_R.ttf");
 }
 
-.hidden {
-    display: none;
-}
 
 #main-view {
     background-image: url("assets/images/background.png");
@@ -85,6 +82,10 @@
     transform: scaleX(-1);
 }
 
+.disabled-arrow {
+    background-image: url("assets/images/arrow-disabled.png");
+}
+
 #container-question-frame {
     border: 2rem solid transparent;
     border-top: none;
@@ -97,6 +98,7 @@
     background-clip: padding-box;
     /* height: 90%; */
     width: 80%;
+    min-height: 5rem;
     /* flex-basis: 85%; */
     /* max-width: 25rem; */
     padding-top: 1.25rem;
@@ -105,14 +107,21 @@
     transform: translateY(-1rem);
 }
 
+#quiz {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #container-choices {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
     width: 100%;
+    transform: translateY(-1rem);
 }
 
-.choice {
+.choice-text {
     flex-grow: 1;
 
     /* Sliced border set up */
@@ -123,7 +132,7 @@
     
     background-color: #eadebc;
     background-clip: padding-box;
-    font-size: small;
+    /* font-size: small; */
 }
 
 .selected {
@@ -131,6 +140,7 @@
     border-image-slice: 25% 30% 25% 25%;
     background-color: #cff494;
 }
+
 
 /* LOADING SCREEN */
 #loading-screen {

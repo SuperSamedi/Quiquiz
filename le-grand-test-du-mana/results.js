@@ -9,6 +9,17 @@ let currentQuestion = {};
 let questionCounter = 0;
 let acceptingAnswer = false;
 
+choices.forEach(choice => {
+    choice.addEventListener("click", e => {
+        if (!acceptingAnswer) return;
+        
+        acceptingAnswer = false;
+        const selectedChoice = e.target;
+        const selectedAnswer = selectedChoice.dataset["number"];
+
+        getNextQuestion();
+    })
+});
 
 fetch("questions.json")
     .then(response => {
@@ -34,6 +45,9 @@ startQuiz = () => {
 };
 
 getNextQuestion = () => {
+    if (questionCounter >= questions.length) {
+        display
+    }
     questionCounter++;
     questionCount.innerText = `Question ${questionCounter} sur ${questions.length}`;
     currentQuestion = questions[questionCounter - 1];
@@ -43,4 +57,5 @@ getNextQuestion = () => {
         const number = choice.dataset["number"];
         choice.innerText = currentQuestion.choices[number - 1].choiceText;
     });
+    acceptingAnswer = true;
 };
